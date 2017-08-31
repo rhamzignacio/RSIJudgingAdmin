@@ -28,19 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnTop10Scores = new System.Windows.Forms.Button();
+            this.btnTop5Scores = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnTop10Scores
+            // 
+            this.btnTop10Scores.Location = new System.Drawing.Point(12, 12);
+            this.btnTop10Scores.Name = "btnTop10Scores";
+            this.btnTop10Scores.Size = new System.Drawing.Size(165, 23);
+            this.btnTop10Scores.TabIndex = 0;
+            this.btnTop10Scores.Text = "Top 10 Scores";
+            this.btnTop10Scores.UseVisualStyleBackColor = true;
+            this.btnTop10Scores.Click += new System.EventHandler(this.btnTop10Scores_Click);
+            // 
+            // btnTop5Scores
+            // 
+            this.btnTop5Scores.Location = new System.Drawing.Point(12, 41);
+            this.btnTop5Scores.Name = "btnTop5Scores";
+            this.btnTop5Scores.Size = new System.Drawing.Size(165, 23);
+            this.btnTop5Scores.TabIndex = 1;
+            this.btnTop5Scores.Text = "Top 5 Scores";
+            this.btnTop5Scores.UseVisualStyleBackColor = true;
+            this.btnTop5Scores.Click += new System.EventHandler(this.btnTop5Scores_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 168);
+            this.ClientSize = new System.Drawing.Size(192, 78);
+            this.Controls.Add(this.btnTop5Scores);
+            this.Controls.Add(this.btnTop10Scores);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MainWindow";
-            this.Text = "RSI Judging Admin 1.0";
+            this.Text = "Admin 1.0";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnTop10Scores;
+        private System.Windows.Forms.Button btnTop5Scores;
     }
 }

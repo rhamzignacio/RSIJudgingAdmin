@@ -16,5 +16,19 @@ namespace RSIJudgingSystemAdmin
         {
             InitializeComponent();
         }
+
+        private void btnTop10Scores_Click(object sender, EventArgs e)
+        {
+            TopTenScoring form = new TopTenScoring();
+
+            form.Show();
+        }
+
+        private void btnTop5Scores_Click(object sender, EventArgs e)
+        {
+            TopFiveScoring form = new TopFiveScoring();
+
+            form.Show();
+        }
     }
 }

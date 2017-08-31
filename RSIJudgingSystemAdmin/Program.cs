@@ -16,7 +16,7 @@ namespace RSIJudgingSystemAdmin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TopTenScoring());
+            Application.Run(new MainWindow());
         }
     }
 }

@@ -10,17 +10,9 @@ using System.Windows.Forms;
 
 namespace RSIJudgingSystemAdmin
 {
-    public partial class TopTenScoring : Form
+    public partial class TopFiveScoring : Form
     {
-        List<Top10Model> judge1 = new List<Top10Model>();
-        List<Top10Model> judge2 = new List<Top10Model>();
-        List<Top10Model> judge3 = new List<Top10Model>();
-        List<Top10Model> judge4 = new List<Top10Model>();
-        List<Top10Model> judge5 = new List<Top10Model>();
-        List<Top10Model> judge6 = new List<Top10Model>();
-        List<Top10Model> judge7 = new List<Top10Model>();
-
-        public TopTenScoring()
+        public TopFiveScoring()
         {
             InitializeComponent();
 
@@ -31,251 +23,6 @@ namespace RSIJudgingSystemAdmin
             timer1.Interval = 1000;
 
             timer1.Start();
-        }
-
-        private void GetJudge1()
-        {
-            listView1.Items.Clear();
-
-            using (var db = new RSIJudgingSystemEntities())
-            {
-                var contestants = from c in db.ContestantProfile
-                                  join j in db.Top10Judge1 on c.ContestantNo equals j.ContestantNo
-                                  select new Top10Model
-                                  {
-                                      ContestantNo = c.ContestantNo,
-                                      PanelInterview = c.PanelInterview,
-                                      beauty = j.Beauty,
-                                      delivery = j.Delivery,
-                                      intelligence = j.Intelligence,
-                                      TotalScore = ((c.PanelInterview / 100) * 50) + j.Beauty + j.Delivery + j.Intelligence
-                                  };
-
-                int ctr = 1;
-
-                judge1 = contestants.ToList();
-
-                contestants.AsQueryable().OrderByDescending(r => r.TotalScore).ToList().ForEach(item =>
-                {
-                    ListViewItem lvi = new ListViewItem(ctr.ToString());
-                    lvi.SubItems.Add(item.ContestantNo);
-                    lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
-
-                    listView1.Items.Add(lvi);
-
-                    ctr++;
-                });
-            }
-        }
-
-        private void GetJudge2()
-        {
-            listView2.Items.Clear();
-
-            using (var db = new RSIJudgingSystemEntities())
-            {
-                var contestants = from c in db.ContestantProfile
-                                  join j in db.Top10Judge2 on c.ContestantNo equals j.ContestantNo
-                                  select new Top10Model
-                                  {
-                                      ContestantNo = c.ContestantNo,
-                                      PanelInterview = c.PanelInterview,
-                                      beauty = j.Beauty,
-                                      delivery = j.Delivery,
-                                      intelligence = j.Intelligence,
-                                      TotalScore = ((c.PanelInterview / 100) * 50) + j.Beauty + j.Delivery + j.Intelligence
-                                  };
-
-                int ctr = 1;
-
-                judge2 = contestants.ToList();
-
-                contestants.AsQueryable().OrderByDescending(r => r.TotalScore).ToList().ForEach(item =>
-                {
-                    ListViewItem lvi = new ListViewItem(ctr.ToString());
-                    lvi.SubItems.Add(item.ContestantNo);
-                    lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
-
-                    listView2.Items.Add(lvi);
-
-                    ctr++;
-                });
-            }
-        }
-
-        private void GetJudge3()
-        {
-            listView3.Items.Clear();
-
-            using (var db = new RSIJudgingSystemEntities())
-            {
-                var contestants = from c in db.ContestantProfile
-                                  join j in db.Top10Judge3 on c.ContestantNo equals j.ContestantNo
-                                  select new Top10Model
-                                  {
-                                      ContestantNo = c.ContestantNo,
-                                      PanelInterview = c.PanelInterview,
-                                      beauty = j.Beauty,
-                                      delivery = j.Delivery,
-                                      intelligence = j.Intelligence,
-                                      TotalScore = ((c.PanelInterview / 100) * 50) + j.Beauty + j.Delivery + j.Intelligence
-                                  };
-
-                int ctr = 1;
-
-                judge3 = contestants.ToList();
-
-                contestants.AsQueryable().OrderByDescending(r => r.TotalScore).ToList().ForEach(item =>
-                {
-                    ListViewItem lvi = new ListViewItem(ctr.ToString());
-                    lvi.SubItems.Add(item.ContestantNo);
-                    lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
-
-                    listView3.Items.Add(lvi);
-
-                    ctr++;
-                });
-            }
-        }
-
-        private void GetJudge4()
-        {
-            listView4.Items.Clear();
-
-            using (var db = new RSIJudgingSystemEntities())
-            {
-                var contestants = from c in db.ContestantProfile
-                                  join j in db.Top10Judge4 on c.ContestantNo equals j.ContestantNo
-                                  select new Top10Model
-                                  {
-                                      ContestantNo = c.ContestantNo,
-                                      PanelInterview = c.PanelInterview,
-                                      beauty = j.Beauty,
-                                      delivery = j.Delivery,
-                                      intelligence = j.Intelligence,
-                                      TotalScore = ((c.PanelInterview / 100) * 50) + j.Beauty + j.Delivery + j.Intelligence
-                                  };
-
-                int ctr = 1;
-
-                judge4 = contestants.ToList();
-
-                contestants.AsQueryable().OrderByDescending(r => r.TotalScore).ToList().ForEach(item =>
-                {
-                    ListViewItem lvi = new ListViewItem(ctr.ToString());
-                    lvi.SubItems.Add(item.ContestantNo);
-                    lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
-
-                    listView4.Items.Add(lvi);
-
-                    ctr++;
-                });
-            }
-        }
-
-        private void GetJudge5()
-        {
-            listView5.Items.Clear();
-
-            using (var db = new RSIJudgingSystemEntities())
-            {
-                var contestants = from c in db.ContestantProfile
-                                  join j in db.Top10Judge3 on c.ContestantNo equals j.ContestantNo
-                                  select new Top10Model
-                                  {
-                                      ContestantNo = c.ContestantNo,
-                                      PanelInterview = c.PanelInterview,
-                                      beauty = j.Beauty,
-                                      delivery = j.Delivery,
-                                      intelligence = j.Intelligence,
-                                      TotalScore = ((c.PanelInterview / 100) * 50) + j.Beauty + j.Delivery + j.Intelligence
-                                  };
-
-                int ctr = 1;
-
-                judge5 = contestants.ToList();
-
-                contestants.AsQueryable().OrderByDescending(r => r.TotalScore).ToList().ForEach(item =>
-                {
-                    ListViewItem lvi = new ListViewItem(ctr.ToString());
-                    lvi.SubItems.Add(item.ContestantNo);
-                    lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
-
-                    listView5.Items.Add(lvi);
-
-                    ctr++;
-                });
-            }
-        }
-
-        private void GetJudge6()
-        {
-            listView6.Items.Clear();
-
-            using (var db = new RSIJudgingSystemEntities())
-            {
-                var contestants = from c in db.ContestantProfile
-                                  join j in db.Top10Judge6 on c.ContestantNo equals j.ContestantNo
-                                  select new Top10Model
-                                  {
-                                      ContestantNo = c.ContestantNo,
-                                      PanelInterview = c.PanelInterview,
-                                      beauty = j.Beauty,
-                                      delivery = j.Delivery,
-                                      intelligence = j.Intelligence,
-                                      TotalScore = ((c.PanelInterview / 100) * 50) + j.Beauty + j.Delivery + j.Intelligence
-                                  };
-
-                int ctr = 1;
-
-                judge6 = contestants.ToList();
-
-                contestants.AsQueryable().OrderByDescending(r => r.TotalScore).ToList().ForEach(item =>
-                {
-                    ListViewItem lvi = new ListViewItem(ctr.ToString());
-                    lvi.SubItems.Add(item.ContestantNo);
-                    lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
-
-                    listView6.Items.Add(lvi);
-
-                    ctr++;
-                });
-            }
-        }
-
-        private void GetJudge7()
-        {
-            listView7.Items.Clear();
-
-            using (var db = new RSIJudgingSystemEntities())
-            {
-                var contestants = from c in db.ContestantProfile
-                                  join j in db.Top10Judge7 on c.ContestantNo equals j.ContestanceNo
-                                  select new Top10Model
-                                  {
-                                      ContestantNo = c.ContestantNo,
-                                      PanelInterview = c.PanelInterview,
-                                      beauty = j.Beauty,
-                                      delivery = j.Delivery,
-                                      intelligence = j.Intelligence,
-                                      TotalScore = ((c.PanelInterview / 100) * 50) + j.Beauty + j.Delivery + j.Intelligence
-                                  };
-
-                int ctr = 1;
-
-                judge7 = contestants.ToList();
-
-                contestants.AsQueryable().OrderByDescending(r => r.TotalScore).ToList().ForEach(item =>
-                {
-                    ListViewItem lvi = new ListViewItem(ctr.ToString());
-                    lvi.SubItems.Add(item.ContestantNo);
-                    lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
-
-                    listView7.Items.Add(lvi);
-
-                    ctr++;
-                });
-            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -294,11 +41,237 @@ namespace RSIJudgingSystemAdmin
 
             GetJudge7();
 
-            GetAverageScore();
+            GetScoreAverage();
         }
 
-        private void GetAverageScore()
+        private void GetJudge1()
         {
+            listView1.Items.Clear();
+
+            using (var db = new RSIJudgingSystemEntities())
+            {
+                var contestants = from j in db.Top5Judge1
+                                  select new Top5Model
+                                  {
+                                      ContestantNo = j.ContestantNo,
+                                      Personality = j.Personality,
+                                      WIT = j.Wit,
+                                      TotalScore = j.Personality + j.Wit
+                                  };
+
+                int ctr = 1;
+
+                contestants.AsQueryable().OrderByDescending(r => r.TotalScore).ToList().ForEach(item =>
+                {
+                    ListViewItem lvi = new ListViewItem(ctr.ToString());
+
+                    lvi.SubItems.Add(item.ContestantNo);
+
+                    lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
+
+                    listView1.Items.Add(lvi);
+
+                    ctr++;
+                });
+            }
+        }
+
+        private void GetJudge2()
+        {
+            listView2.Items.Clear();
+
+            using (var db = new RSIJudgingSystemEntities())
+            {
+                var contestants = from j in db.Top5Judge2
+                                  select new Top5Model
+                                  {
+                                      ContestantNo = j.ContestantNo,
+                                      Personality = j.Personality,
+                                      WIT = j.Wit,
+                                      TotalScore = j.Personality + j.Wit
+                                  };
+
+                int ctr = 1;
+
+                contestants.AsQueryable().OrderByDescending(r => r.TotalScore).ToList().ForEach(item =>
+                {
+                    ListViewItem lvi = new ListViewItem(ctr.ToString());
+
+                    lvi.SubItems.Add(item.ContestantNo);
+
+                    lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
+
+                    listView2.Items.Add(lvi);
+
+                    ctr++;
+                });
+            }
+        }
+
+        private void GetJudge3()
+        {
+            listView3.Items.Clear();
+
+            using (var db = new RSIJudgingSystemEntities())
+            {
+                var contestants = from j in db.Top5Judge3
+                                  select new Top5Model
+                                  {
+                                      ContestantNo = j.ContestantNo,
+                                      Personality = j.Personality,
+                                      WIT = j.Wit,
+                                      TotalScore = j.Personality + j.Wit
+                                  };
+
+                int ctr = 1;
+
+                contestants.AsQueryable().OrderByDescending(r => r.TotalScore).ToList().ForEach(item =>
+                {
+                    ListViewItem lvi = new ListViewItem(ctr.ToString());
+
+                    lvi.SubItems.Add(item.ContestantNo);
+
+                    lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
+
+                    listView3.Items.Add(lvi);
+
+                    ctr++;
+                });
+            }
+        }
+
+        private void GetJudge4()
+        {
+            listView4.Items.Clear();
+
+            using (var db = new RSIJudgingSystemEntities())
+            {
+                var contestants = from j in db.Top5Judge4
+                                  select new Top5Model
+                                  {
+                                      ContestantNo = j.ContestantNo,
+                                      Personality = j.Personality,
+                                      WIT = j.Wit,
+                                      TotalScore = j.Personality + j.Wit
+                                  };
+
+                int ctr = 1;
+
+                contestants.AsQueryable().OrderByDescending(r => r.TotalScore).ToList().ForEach(item =>
+                {
+                    ListViewItem lvi = new ListViewItem(ctr.ToString());
+
+                    lvi.SubItems.Add(item.ContestantNo);
+
+                    lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
+
+                    listView4.Items.Add(lvi);
+
+                    ctr++;
+                });
+            }
+        }
+
+        private void GetJudge5()
+        {
+            listView5.Items.Clear();
+
+            using (var db = new RSIJudgingSystemEntities())
+            {
+                var contestants = from j in db.Top5Judge5
+                                  select new Top5Model
+                                  {
+                                      ContestantNo = j.ContestantNo,
+                                      Personality = j.Personality,
+                                      WIT = j.Wit,
+                                      TotalScore = j.Personality + j.Wit
+                                  };
+
+                int ctr = 1;
+
+                contestants.AsQueryable().OrderByDescending(r => r.TotalScore).ToList().ForEach(item =>
+                {
+                    ListViewItem lvi = new ListViewItem(ctr.ToString());
+
+                    lvi.SubItems.Add(item.ContestantNo);
+
+                    lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
+
+                    listView5.Items.Add(lvi);
+
+                    ctr++;
+                });
+            }
+        }
+
+        private void GetJudge6()
+        {
+            listView6.Items.Clear();
+
+            using (var db = new RSIJudgingSystemEntities())
+            {
+                var contestants = from j in db.Top5Judge6
+                                  select new Top5Model
+                                  {
+                                      ContestantNo = j.ContestantNo,
+                                      Personality = j.Personality,
+                                      WIT = j.Wit,
+                                      TotalScore = j.Personality + j.Wit
+                                  };
+
+                int ctr = 1;
+
+                contestants.AsQueryable().OrderByDescending(r => r.TotalScore).ToList().ForEach(item =>
+                {
+                    ListViewItem lvi = new ListViewItem(ctr.ToString());
+
+                    lvi.SubItems.Add(item.ContestantNo);
+
+                    lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
+
+                    listView6.Items.Add(lvi);
+
+                    ctr++;
+                });
+            }
+        }
+
+        private void GetJudge7()
+        {
+            listView7.Items.Clear();
+
+            using (var db = new RSIJudgingSystemEntities())
+            {
+                var contestants = from j in db.Top5Judge7
+                                  select new Top5Model
+                                  {
+                                      ContestantNo = j.ContestantNo,
+                                      Personality = j.Personality,
+                                      WIT = j.Wit,
+                                      TotalScore = j.Personality + j.Wit
+                                  };
+
+                int ctr = 1;
+
+                contestants.AsQueryable().OrderByDescending(r => r.TotalScore).ToList().ForEach(item =>
+                {
+                    ListViewItem lvi = new ListViewItem(ctr.ToString());
+
+                    lvi.SubItems.Add(item.ContestantNo);
+
+                    lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
+
+                    listView7.Items.Add(lvi);
+
+                    ctr++;
+                });
+            }
+        }
+
+        private void GetScoreAverage()
+        {
+            listView8.Items.Clear();
+
             using (var db = new RSIJudgingSystemEntities())
             {
                 var contestant = db.ContestantProfile.OrderByDescending(r => r.PanelInterview).ToList();
@@ -307,7 +280,7 @@ namespace RSIJudgingSystemAdmin
 
                 for (int x = 0; x < contestant.Count; x++)
                 {
-                    if(x < 10)
+                    if (x < 10)
                     {
                         var contesNo = contestant[x].ContestantNo;
 
@@ -365,17 +338,71 @@ namespace RSIJudgingSystemAdmin
                     }
                 }
 
-                var temp = top10List.OrderByDescending(r => r.TotalScore).ToList();
+                var top10 = top10List.OrderByDescending(r => r.TotalScore).ToList();
+
+                List<Top5ScoreModel> top5Score = new List<Top5ScoreModel>();
+
+                for(int x = 0; x < top10.Count; x++)
+                {
+                    if(x < 5)
+                    {
+                        var tempNo = top10[x].contestantNo;
+
+                        var query = from c in db.ContestantProfile
+                                    join j1 in db.Top5Judge1 on c.ContestantNo equals j1.ContestantNo into qJ1
+                                    from fJ1 in qJ1.DefaultIfEmpty()
+                                    join j2 in db.Top5Judge2 on c.ContestantNo equals j2.ContestantNo into qJ2
+                                    from fJ2 in qJ2.DefaultIfEmpty()
+                                    join j3 in db.Top5Judge3 on c.ContestantNo equals j3.ContestantNo into qJ3
+                                    from fJ3 in qJ3.DefaultIfEmpty()
+                                    join j4 in db.Top5Judge4 on c.ContestantNo equals j4.ContestantNo into qJ4
+                                    from fJ4 in qJ4.DefaultIfEmpty()
+                                    join j5 in db.Top5Judge5 on c.ContestantNo equals j5.ContestantNo into qJ5
+                                    from fJ5 in qJ5.DefaultIfEmpty()
+                                    join j6 in db.Top5Judge6 on c.ContestantNo equals j6.ContestantNo into qJ6
+                                    from fJ6 in qJ6.DefaultIfEmpty()
+                                    join j7 in db.Top5Judge7 on c.ContestantNo equals j7.ContestantNo into qJ7
+                                    from fJ7 in qJ7.DefaultIfEmpty()
+                                    where c.ContestantNo == tempNo
+                                    select new Top5ScoreModel
+                                    {
+                                        ContestantNo = c.ContestantNo,
+
+                                        Personality1 = fJ1.Personality,
+                                        WIT1 = fJ1.Wit,
+
+                                        Personality2 = fJ2.Personality,
+                                        WIT2 = fJ2.Wit,
+
+                                        Personality3 = fJ3.Personality,
+                                        WIT3 = fJ3.Wit,
+
+                                        Personality4 = fJ4.Personality,
+                                        WIT4 = fJ4.Wit,
+
+                                        Personality5 = fJ5.Personality,
+                                        WIT5 = fJ5.Wit,
+
+                                        Personality6 = fJ6.Personality,
+                                        WIT6 = fJ6.Wit,
+
+                                        Personality7 = fJ7.Personality,
+                                        WIT7 = fJ7.Wit
+                                    };
+
+                        top5Score.Add(query.FirstOrDefault());
+                    }
+                }
+
+                top5Score = top5Score.OrderByDescending(r => r.TotalScore).ToList();
 
                 int ctr = 1;
 
-                listView8.Items.Clear();
-
-                temp.ForEach(item =>
+                top5Score.ForEach(item =>
                 {
                     ListViewItem lvi = new ListViewItem(ctr.ToString());
 
-                    lvi.SubItems.Add(item.contestantNo);
+                    lvi.SubItems.Add(item.ContestantNo);
 
                     lvi.SubItems.Add(string.Format("{0:0.00}", item.TotalScore));
 
@@ -386,12 +413,7 @@ namespace RSIJudgingSystemAdmin
             }
         }
 
-        private void TopTenScoring_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
+        private void listView5_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

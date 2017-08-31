@@ -129,6 +129,12 @@
     <Compile Include="Top5Judge7.cs">
       <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="TopFiveScoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopFiveScoring.Designer.cs">
+      <DependentUpon>TopFiveScoring.cs</DependentUpon>
+    </Compile>
     <Compile Include="TopTenScoring.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TopFiveScoring.resx">
+      <DependentUpon>TopFiveScoring.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TopTenScoring.resx">
       <DependentUpon>TopTenScoring.cs</DependentUpon>
     </EmbeddedResource>
