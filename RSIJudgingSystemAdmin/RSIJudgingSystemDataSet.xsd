@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RSIJudgingSystemDataSet" targetNamespace="http://tempuri.org/RSIJudgingSystemDataSet.xsd" xmlns:mstns="http://tempuri.org/RSIJudgingSystemDataSet.xsd" xmlns="http://tempuri.org/RSIJudgingSystemDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="RSIJudgingSystemConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RSIJudgingSystemConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RSIJudgingSystemAdmin.Properties.Settings.GlobalReference.Default.RSIJudgingSystemConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RankingWinerTableAdapter" GeneratorDataComponentClassName="RankingWinerTableAdapter" Name="RankingWiner" UserDataComponentName="RankingWinerTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIJudgingSystemConnectionString (Settings)" DbObjectName="RSIJudgingSystem.dbo.RankingWiner" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ContestantNo, Name, Location, TotalScore1, TotalScore2, TotalScore3, TotalScore4, TotalScore5, TotalScore6, TotalScore7, FinalScore FROM dbo.RankingWiner</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ContestantNo" DataSetColumn="ContestantNo" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Location" DataSetColumn="Location" />
+              <Mapping SourceColumn="TotalScore1" DataSetColumn="TotalScore1" />
+              <Mapping SourceColumn="TotalScore2" DataSetColumn="TotalScore2" />
+              <Mapping SourceColumn="TotalScore3" DataSetColumn="TotalScore3" />
+              <Mapping SourceColumn="TotalScore4" DataSetColumn="TotalScore4" />
+              <Mapping SourceColumn="TotalScore5" DataSetColumn="TotalScore5" />
+              <Mapping SourceColumn="TotalScore6" DataSetColumn="TotalScore6" />
+              <Mapping SourceColumn="TotalScore7" DataSetColumn="TotalScore7" />
+              <Mapping SourceColumn="FinalScore" DataSetColumn="FinalScore" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Top10WinnersTableAdapter" GeneratorDataComponentClassName="Top10WinnersTableAdapter" Name="Top10Winners" UserDataComponentName="Top10WinnersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIJudgingSystemConnectionString (Settings)" DbObjectName="RSIJudgingSystem.dbo.Top10Winners" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ContestantNo, Name, Location, TotalScore1, TotalScore2, TotalScore3, TotalScore4, TotalScore5, TotalScore6, TotalScore7, FinalScore FROM dbo.Top10Winners</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ContestantNo" DataSetColumn="ContestantNo" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Location" DataSetColumn="Location" />
+              <Mapping SourceColumn="TotalScore1" DataSetColumn="TotalScore1" />
+              <Mapping SourceColumn="TotalScore2" DataSetColumn="TotalScore2" />
+              <Mapping SourceColumn="TotalScore3" DataSetColumn="TotalScore3" />
+              <Mapping SourceColumn="TotalScore4" DataSetColumn="TotalScore4" />
+              <Mapping SourceColumn="TotalScore5" DataSetColumn="TotalScore5" />
+              <Mapping SourceColumn="TotalScore6" DataSetColumn="TotalScore6" />
+              <Mapping SourceColumn="TotalScore7" DataSetColumn="TotalScore7" />
+              <Mapping SourceColumn="FinalScore" DataSetColumn="FinalScore" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Top5WinnersTableAdapter" GeneratorDataComponentClassName="Top5WinnersTableAdapter" Name="Top5Winners" UserDataComponentName="Top5WinnersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSIJudgingSystemConnectionString (Settings)" DbObjectName="RSIJudgingSystem.dbo.Top5Winners" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ContestantNo, Name, Location, TotalScore1, TotalScore2, TotalScore3, TotalScore4, TotalScore5, TotalScore6, TotalScore7, FinalScore FROM dbo.Top5Winners</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ContestantNo" DataSetColumn="ContestantNo" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Location" DataSetColumn="Location" />
+              <Mapping SourceColumn="TotalScore1" DataSetColumn="TotalScore1" />
+              <Mapping SourceColumn="TotalScore2" DataSetColumn="TotalScore2" />
+              <Mapping SourceColumn="TotalScore3" DataSetColumn="TotalScore3" />
+              <Mapping SourceColumn="TotalScore4" DataSetColumn="TotalScore4" />
+              <Mapping SourceColumn="TotalScore5" DataSetColumn="TotalScore5" />
+              <Mapping SourceColumn="TotalScore6" DataSetColumn="TotalScore6" />
+              <Mapping SourceColumn="TotalScore7" DataSetColumn="TotalScore7" />
+              <Mapping SourceColumn="FinalScore" DataSetColumn="FinalScore" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RSIJudgingSystemDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="RSIJudgingSystemDataSet" msprop:Generator_UserDSName="RSIJudgingSystemDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RankingWiner" msprop:Generator_TableClassName="RankingWinerDataTable" msprop:Generator_TableVarName="tableRankingWiner" msprop:Generator_TablePropName="RankingWiner" msprop:Generator_RowDeletingName="RankingWinerRowDeleting" msprop:Generator_RowChangingName="RankingWinerRowChanging" msprop:Generator_RowEvHandlerName="RankingWinerRowChangeEventHandler" msprop:Generator_RowDeletedName="RankingWinerRowDeleted" msprop:Generator_UserTableName="RankingWiner" msprop:Generator_RowChangedName="RankingWinerRowChanged" msprop:Generator_RowEvArgName="RankingWinerRowChangeEvent" msprop:Generator_RowClassName="RankingWinerRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ContestantNo" msprop:Generator_ColumnVarNameInTable="columnContestantNo" msprop:Generator_ColumnPropNameInRow="ContestantNo" msprop:Generator_ColumnPropNameInTable="ContestantNoColumn" msprop:Generator_UserColumnName="ContestantNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_UserColumnName="Location" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalScore1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore1" msprop:Generator_ColumnPropNameInRow="TotalScore1" msprop:Generator_ColumnPropNameInTable="TotalScore1Column" msprop:Generator_UserColumnName="TotalScore1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore2" msprop:Generator_ColumnPropNameInRow="TotalScore2" msprop:Generator_ColumnPropNameInTable="TotalScore2Column" msprop:Generator_UserColumnName="TotalScore2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore3" msprop:Generator_ColumnPropNameInRow="TotalScore3" msprop:Generator_ColumnPropNameInTable="TotalScore3Column" msprop:Generator_UserColumnName="TotalScore3" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore4" msprop:Generator_ColumnPropNameInRow="TotalScore4" msprop:Generator_ColumnPropNameInTable="TotalScore4Column" msprop:Generator_UserColumnName="TotalScore4" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore5" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore5" msprop:Generator_ColumnPropNameInRow="TotalScore5" msprop:Generator_ColumnPropNameInTable="TotalScore5Column" msprop:Generator_UserColumnName="TotalScore5" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore6" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore6" msprop:Generator_ColumnPropNameInRow="TotalScore6" msprop:Generator_ColumnPropNameInTable="TotalScore6Column" msprop:Generator_UserColumnName="TotalScore6" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore7" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore7" msprop:Generator_ColumnPropNameInRow="TotalScore7" msprop:Generator_ColumnPropNameInTable="TotalScore7Column" msprop:Generator_UserColumnName="TotalScore7" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FinalScore" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFinalScore" msprop:Generator_ColumnPropNameInRow="FinalScore" msprop:Generator_ColumnPropNameInTable="FinalScoreColumn" msprop:Generator_UserColumnName="FinalScore" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Top10Winners" msprop:Generator_TableClassName="Top10WinnersDataTable" msprop:Generator_TableVarName="tableTop10Winners" msprop:Generator_TablePropName="Top10Winners" msprop:Generator_RowDeletingName="Top10WinnersRowDeleting" msprop:Generator_RowChangingName="Top10WinnersRowChanging" msprop:Generator_RowEvHandlerName="Top10WinnersRowChangeEventHandler" msprop:Generator_RowDeletedName="Top10WinnersRowDeleted" msprop:Generator_UserTableName="Top10Winners" msprop:Generator_RowChangedName="Top10WinnersRowChanged" msprop:Generator_RowEvArgName="Top10WinnersRowChangeEvent" msprop:Generator_RowClassName="Top10WinnersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ContestantNo" msprop:Generator_ColumnVarNameInTable="columnContestantNo" msprop:Generator_ColumnPropNameInRow="ContestantNo" msprop:Generator_ColumnPropNameInTable="ContestantNoColumn" msprop:Generator_UserColumnName="ContestantNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_UserColumnName="Location" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalScore1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore1" msprop:Generator_ColumnPropNameInRow="TotalScore1" msprop:Generator_ColumnPropNameInTable="TotalScore1Column" msprop:Generator_UserColumnName="TotalScore1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore2" msprop:Generator_ColumnPropNameInRow="TotalScore2" msprop:Generator_ColumnPropNameInTable="TotalScore2Column" msprop:Generator_UserColumnName="TotalScore2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore3" msprop:Generator_ColumnPropNameInRow="TotalScore3" msprop:Generator_ColumnPropNameInTable="TotalScore3Column" msprop:Generator_UserColumnName="TotalScore3" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore4" msprop:Generator_ColumnPropNameInRow="TotalScore4" msprop:Generator_ColumnPropNameInTable="TotalScore4Column" msprop:Generator_UserColumnName="TotalScore4" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore5" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore5" msprop:Generator_ColumnPropNameInRow="TotalScore5" msprop:Generator_ColumnPropNameInTable="TotalScore5Column" msprop:Generator_UserColumnName="TotalScore5" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore6" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore6" msprop:Generator_ColumnPropNameInRow="TotalScore6" msprop:Generator_ColumnPropNameInTable="TotalScore6Column" msprop:Generator_UserColumnName="TotalScore6" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore7" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore7" msprop:Generator_ColumnPropNameInRow="TotalScore7" msprop:Generator_ColumnPropNameInTable="TotalScore7Column" msprop:Generator_UserColumnName="TotalScore7" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FinalScore" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFinalScore" msprop:Generator_ColumnPropNameInRow="FinalScore" msprop:Generator_ColumnPropNameInTable="FinalScoreColumn" msprop:Generator_UserColumnName="FinalScore" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Top5Winners" msprop:Generator_TableClassName="Top5WinnersDataTable" msprop:Generator_TableVarName="tableTop5Winners" msprop:Generator_TablePropName="Top5Winners" msprop:Generator_RowDeletingName="Top5WinnersRowDeleting" msprop:Generator_RowChangingName="Top5WinnersRowChanging" msprop:Generator_RowEvHandlerName="Top5WinnersRowChangeEventHandler" msprop:Generator_RowDeletedName="Top5WinnersRowDeleted" msprop:Generator_UserTableName="Top5Winners" msprop:Generator_RowChangedName="Top5WinnersRowChanged" msprop:Generator_RowEvArgName="Top5WinnersRowChangeEvent" msprop:Generator_RowClassName="Top5WinnersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ContestantNo" msprop:Generator_ColumnVarNameInTable="columnContestantNo" msprop:Generator_ColumnPropNameInRow="ContestantNo" msprop:Generator_ColumnPropNameInTable="ContestantNoColumn" msprop:Generator_UserColumnName="ContestantNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_UserColumnName="Location" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotalScore1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore1" msprop:Generator_ColumnPropNameInRow="TotalScore1" msprop:Generator_ColumnPropNameInTable="TotalScore1Column" msprop:Generator_UserColumnName="TotalScore1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore2" msprop:Generator_ColumnPropNameInRow="TotalScore2" msprop:Generator_ColumnPropNameInTable="TotalScore2Column" msprop:Generator_UserColumnName="TotalScore2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore3" msprop:Generator_ColumnPropNameInRow="TotalScore3" msprop:Generator_ColumnPropNameInTable="TotalScore3Column" msprop:Generator_UserColumnName="TotalScore3" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore4" msprop:Generator_ColumnPropNameInRow="TotalScore4" msprop:Generator_ColumnPropNameInTable="TotalScore4Column" msprop:Generator_UserColumnName="TotalScore4" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore5" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore5" msprop:Generator_ColumnPropNameInRow="TotalScore5" msprop:Generator_ColumnPropNameInTable="TotalScore5Column" msprop:Generator_UserColumnName="TotalScore5" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore6" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore6" msprop:Generator_ColumnPropNameInRow="TotalScore6" msprop:Generator_ColumnPropNameInTable="TotalScore6Column" msprop:Generator_UserColumnName="TotalScore6" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalScore7" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalScore7" msprop:Generator_ColumnPropNameInRow="TotalScore7" msprop:Generator_ColumnPropNameInTable="TotalScore7Column" msprop:Generator_UserColumnName="TotalScore7" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FinalScore" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFinalScore" msprop:Generator_ColumnPropNameInRow="FinalScore" msprop:Generator_ColumnPropNameInTable="FinalScoreColumn" msprop:Generator_UserColumnName="FinalScore" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:RankingWiner" />
+      <xs:field xpath="mstns:ContestantNo" />
+    </xs:unique>
+    <xs:unique name="Top10Winners_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Top10Winners" />
+      <xs:field xpath="mstns:ContestantNo" />
+    </xs:unique>
+    <xs:unique name="Top5Winners_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Top5Winners" />
+      <xs:field xpath="mstns:ContestantNo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

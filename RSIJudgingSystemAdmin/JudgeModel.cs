@@ -21,7 +21,7 @@ namespace RSIJudgingSystemAdmin
         public decimal? TotalScore { get; set; }
     }
 
-    public class Top5Model
+    public class RankingModel
     {
         public string ContestantNo { get; set; }
         public decimal? Personality { get; set; }
@@ -29,11 +29,322 @@ namespace RSIJudgingSystemAdmin
         public decimal? TotalScore { get; set; }
     }
 
+    public class Top5Model
+    {
+        public string ContestantNo { get; set; }
+        public decimal? Beauty { get; set; }
+        public decimal? Intelligence { get; set; }
+        public decimal? Poise { get; set; }
+        public decimal? TotalScore { get; set; }
+    }
+
     public class Top5ScoreModel
+    {
+        public string ContestantNo { get; set; }
+
+        public decimal? Total
+        {
+            get
+            {
+                return (Beauty1 + Intelligence1 + Poise1 +
+                    Beauty2 + Intelligence2 + Poise2 +
+                    Beauty3 + Intelligence3 + Poise3 +
+                    Beauty4 + Intelligence4 + Poise4 +
+                    Beauty5 + Intelligence5 + Poise5 +
+                    Beauty6 + Intelligence6 + Poise6 +
+                    Beauty7 + Intelligence7 + Poise7) / 7;
+            }
+
+        }
+        private decimal? _beauty1;
+        public decimal? Beauty1
+        {
+            get
+            {
+                if (_beauty1 == null)
+                    return 0;
+                else
+                    return _beauty1;
+            }
+            set { _beauty1 = value; }
+        }
+
+        private decimal? _intelligence1;
+        public decimal? Intelligence1
+        {
+            get
+            {
+                if (_intelligence1 == null)
+                    return 0;
+                else
+                    return _intelligence1;
+            }
+            set { _intelligence1 = value; }
+        }
+
+        private decimal? _poise1;
+        public decimal? Poise1
+        {
+            get
+            {
+                if (_poise1 == null)
+                    return 0;
+                else
+                    return _poise1;
+            }
+            set { _poise1 = value; }
+        }
+
+        //Judge No 2
+        private decimal? _beauty2;
+        public decimal? Beauty2
+        {
+            get
+            {
+                if (_beauty2 == null)
+                    return 0;
+                else
+                    return _beauty2;
+            }
+            set { _beauty2 = value; }
+        }
+
+        private decimal? _intelligence2;
+        public decimal? Intelligence2
+        {
+            get
+            {
+                if (_intelligence2 == null)
+                    return 0;
+                else
+                    return _intelligence2;
+            }
+            set { _intelligence2 = value; }
+        }
+
+        private decimal? _poise2;
+        public decimal? Poise2
+        {
+            get
+            {
+                if (_poise2 == null)
+                    return 0;
+                else
+                    return _poise2;
+            }
+            set { _poise2 = value; }
+        }
+
+        //Judge No 3
+        private decimal? _beauty3;
+        public decimal? Beauty3
+        {
+            get
+            {
+                if (_beauty3 == null)
+                    return 0;
+                else
+                    return _beauty3;
+            }
+            set { _beauty3 = value; }
+        }
+
+        private decimal? _intelligence3;
+        public decimal? Intelligence3
+        {
+            get
+            {
+                if (_intelligence3 == null)
+                    return 0;
+                else
+                    return _intelligence3;
+            }
+            set { _intelligence3 = value; }
+        }
+
+        private decimal? _poise3;
+        public decimal? Poise3
+        {
+            get
+            {
+                if (_poise3 == null)
+                    return 0;
+                else
+                    return _poise3;
+            }
+            set { _poise3 = value; }
+        }
+
+        //Judge No 4
+        private decimal? _beauty4;
+        public decimal? Beauty4
+        {
+            get
+            {
+                if (_beauty4 == null)
+                    return 0;
+                else
+                    return _beauty4;
+            }
+            set { _beauty4 = value; }
+        }
+
+        private decimal? _intelligence4;
+        public decimal? Intelligence4
+        {
+            get
+            {
+                if (_intelligence4 == null)
+                    return 0;
+                else
+                    return _intelligence4;
+            }
+            set { _intelligence4 = value; }
+        }
+
+        private decimal? _poise4;
+        public decimal? Poise4
+        {
+            get
+            {
+                if (_poise4 == null)
+                    return 0;
+                else
+                    return _poise4;
+            }
+            set { _poise4 = value; }
+        }
+
+        //Judge No 5
+        private decimal? _beauty5;
+        public decimal? Beauty5
+        {
+            get
+            {
+                if (_beauty5 == null)
+                    return 0;
+                else
+                    return _beauty5;
+            }
+            set { _beauty5 = value; }
+        }
+
+        private decimal? _intelligence5;
+        public decimal? Intelligence5
+        {
+            get
+            {
+                if (_intelligence5 == null)
+                    return 0;
+                else
+                    return _intelligence5;
+            }
+            set { _intelligence5 = value; }
+        }
+
+        private decimal? _poise5;
+        public decimal? Poise5
+        {
+            get
+            {
+                if (_poise5 == null)
+                    return 0;
+                else
+                    return _poise5;
+            }
+            set { _poise5 = value; }
+        }
+
+        //Judge No 6
+        private decimal? _beauty6;
+        public decimal? Beauty6
+        {
+            get
+            {
+                if (_beauty6 == null)
+                    return 0;
+                else
+                    return _beauty6;
+            }
+            set { _beauty6 = value; }
+        }
+
+        private decimal? _intelligence6;
+        public decimal? Intelligence6
+        {
+            get
+            {
+                if (_intelligence6 == null)
+                    return 0;
+                else
+                    return _intelligence6;
+            }
+            set { _intelligence6 = value; }
+        }
+
+        private decimal? _poise6;
+        public decimal? Poise6
+        {
+            get
+            {
+                if (_poise6 == null)
+                    return 0;
+                else
+                    return _poise6;
+            }
+            set { _poise6 = value; }
+        }
+
+        //Judge No 7
+        private decimal? _beauty7;
+        public decimal? Beauty7
+        {
+            get
+            {
+                if (_beauty7 == null)
+                    return 0;
+                else
+                    return _beauty7;
+            }
+            set { _beauty7 = value; }
+        }
+
+        private decimal? _intelligence7;
+        public decimal? Intelligence7
+        {
+            get
+            {
+                if (_intelligence7 == null)
+                    return 0;
+                else
+                    return _intelligence7;
+            }
+            set { _intelligence7 = value; }
+        }
+
+        private decimal? _poise7;
+        public decimal? Poise7
+        {
+            get
+            {
+                if (_poise7 == null)
+                    return 0;
+                else
+                    return _poise7;
+            }
+            set { _poise7 = value; }
+        }
+
+        public decimal? TotalScore { get; set; }
+    }
+
+    public class RankingScoreModel
     {
 
         public string ContestantNo { get; set; }
         public decimal PanelInterview { get; set; }
+
+        public decimal? TotalScore { get; set; }
         //JudgeNo1
         private decimal? _personality1;
         public decimal? Personality1
@@ -307,13 +618,6 @@ namespace RSIJudgingSystemAdmin
             }
         }
 
-        public decimal? TotalScore
-        {
-            get
-            {
-                return (Total1 + Total2 + Total3 + Total4 + Total5 + Total6 + Total7) / 7;
-            }
-        }
     }
 
     public class Top10ScoreModel

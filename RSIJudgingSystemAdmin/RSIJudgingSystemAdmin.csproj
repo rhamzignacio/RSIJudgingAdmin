@@ -41,11 +41,14 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,6 +75,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RankingJudge1.cs">
+      <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RankingJudge2.cs">
+      <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RankingJudge3.cs">
+      <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RankingJudge4.cs">
+      <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RankingJudge5.cs">
+      <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RankingJudge6.cs">
+      <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RankingJudge7.cs">
+      <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RankingWiner.cs">
+      <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RSIJudgingSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RSIJudgingSystemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RSIJudgingSystemEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -108,6 +140,15 @@
     <Compile Include="Top10Judge7.cs">
       <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Top10Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Top10Report.Designer.cs">
+      <DependentUpon>Top10Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Top10Winners.cs">
+      <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Top5Judge1.cs">
       <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
     </Compile>
@@ -129,6 +170,15 @@
     <Compile Include="Top5Judge7.cs">
       <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Top5PrintReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Top5PrintReport.Designer.cs">
+      <DependentUpon>Top5PrintReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Top5Winners.cs">
+      <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="TopFiveScoring.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +191,13 @@
     <Compile Include="TopTenScoring.Designer.cs">
       <DependentUpon>TopTenScoring.cs</DependentUpon>
     </Compile>
+    <Compile Include="TopTenToFiveScoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopTenToFiveScoring.Designer.cs">
+      <DependentUpon>TopTenToFiveScoring.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ForTop10.rdlc" />
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,11 +210,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Top10Report.resx">
+      <DependentUpon>Top10Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Top5PrintReport.resx">
+      <DependentUpon>Top5PrintReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Top5Report.rdlc" />
     <EmbeddedResource Include="TopFiveScoring.resx">
       <DependentUpon>TopFiveScoring.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TopTenScoring.resx">
       <DependentUpon>TopTenScoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopTenToFiveScoring.resx">
+      <DependentUpon>TopTenToFiveScoring.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -173,6 +240,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>RSIJudgingSystemEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="RSIJudgingSystemDataSet.xsc">
+      <DependentUpon>RSIJudgingSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RSIJudgingSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RSIJudgingSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RSIJudgingSystemDataSet.xss">
+      <DependentUpon>RSIJudgingSystemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="RSIJudgingSystemEntities.edmx.diagram">
       <DependentUpon>RSIJudgingSystemEntities.edmx</DependentUpon>
     </None>
@@ -181,6 +259,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Logo.jpg" />
     <Content Include="RSIJudgingSystemEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>RSIJudgingSystemEntities.edmx</DependentUpon>
@@ -194,6 +273,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

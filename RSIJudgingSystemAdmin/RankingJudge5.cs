@@ -12,11 +12,10 @@ namespace RSIJudgingSystemAdmin
     using System;
     using System.Collections.Generic;
     
-    public partial class Top5Judge6
+    public partial class RankingJudge5
     {
-        public string CandidateNo { get; set; }
-        public Nullable<decimal> Intelligence { get; set; }
-        public Nullable<decimal> Beauty { get; set; }
-        public Nullable<decimal> Poise { get; set; }
+        public string ContestantNo { get; set; }
+        public Nullable<decimal> Personality { get; set; }
+        public Nullable<decimal> Wit { get; set; }
     }
 }

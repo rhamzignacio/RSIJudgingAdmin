@@ -30,5 +30,12 @@ namespace RSIJudgingSystemAdmin
 
             form.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TopTenToFiveScoring form = new TopTenToFiveScoring();
+
+            form.Show();
+        }
     }
 }

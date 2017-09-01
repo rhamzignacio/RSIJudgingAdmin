@@ -30,6 +30,7 @@
         {
             this.btnTop10Scores = new System.Windows.Forms.Button();
             this.btnTop5Scores = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnTop10Scores
@@ -44,19 +45,30 @@
             // 
             // btnTop5Scores
             // 
-            this.btnTop5Scores.Location = new System.Drawing.Point(12, 41);
+            this.btnTop5Scores.Location = new System.Drawing.Point(12, 70);
             this.btnTop5Scores.Name = "btnTop5Scores";
             this.btnTop5Scores.Size = new System.Drawing.Size(165, 23);
             this.btnTop5Scores.TabIndex = 1;
-            this.btnTop5Scores.Text = "Top 5 Scores";
+            this.btnTop5Scores.Text = "Ranking Scores";
             this.btnTop5Scores.UseVisualStyleBackColor = true;
             this.btnTop5Scores.Click += new System.EventHandler(this.btnTop5Scores_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 41);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Top 5 Scores";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(192, 78);
+            this.ClientSize = new System.Drawing.Size(192, 103);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnTop5Scores);
             this.Controls.Add(this.btnTop10Scores);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -70,5 +82,6 @@
 
         private System.Windows.Forms.Button btnTop10Scores;
         private System.Windows.Forms.Button btnTop5Scores;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -39,12 +39,12 @@
             this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblJ6 = new System.Windows.Forms.Label();
+            this.lblJ5 = new System.Windows.Forms.Label();
+            this.lblJ4 = new System.Windows.Forms.Label();
+            this.lblJ3 = new System.Windows.Forms.Label();
+            this.lblJ2 = new System.Windows.Forms.Label();
+            this.lblJ1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listView5 = new System.Windows.Forms.ListView();
@@ -58,7 +58,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblJ7 = new System.Windows.Forms.Label();
             this.listView3 = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -86,7 +86,7 @@
             this.columnHeader18});
             this.listView6.FullRowSelect = true;
             this.listView6.GridLines = true;
-            this.listView6.Location = new System.Drawing.Point(523, 199);
+            this.listView6.Location = new System.Drawing.Point(272, 199);
             this.listView6.Name = "listView6";
             this.listView6.Size = new System.Drawing.Size(229, 130);
             this.listView6.TabIndex = 19;
@@ -115,7 +115,7 @@
             this.columnHeader21});
             this.listView7.FullRowSelect = true;
             this.listView7.GridLines = true;
-            this.listView7.Location = new System.Drawing.Point(768, 40);
+            this.listView7.Location = new System.Drawing.Point(523, 199);
             this.listView7.Name = "listView7";
             this.listView7.Size = new System.Drawing.Size(229, 130);
             this.listView7.TabIndex = 20;
@@ -141,65 +141,65 @@
             this.columnHeader15.Text = "Score";
             this.columnHeader15.Width = 78;
             // 
-            // label6
+            // lblJ6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(338, 176);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 20);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Judge No 6";
+            this.lblJ6.AutoSize = true;
+            this.lblJ6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJ6.Location = new System.Drawing.Point(338, 176);
+            this.lblJ6.Name = "lblJ6";
+            this.lblJ6.Size = new System.Drawing.Size(100, 20);
+            this.lblJ6.TabIndex = 26;
+            this.lblJ6.Text = "Judge No 6";
             // 
-            // label5
+            // lblJ5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(81, 176);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 20);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Judge No 5";
+            this.lblJ5.AutoSize = true;
+            this.lblJ5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJ5.Location = new System.Drawing.Point(81, 176);
+            this.lblJ5.Name = "lblJ5";
+            this.lblJ5.Size = new System.Drawing.Size(100, 20);
+            this.lblJ5.TabIndex = 25;
+            this.lblJ5.Text = "Judge No 5";
             // 
-            // label4
+            // lblJ4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(835, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 20);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Judge No 4";
+            this.lblJ4.AutoSize = true;
+            this.lblJ4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJ4.Location = new System.Drawing.Point(835, 17);
+            this.lblJ4.Name = "lblJ4";
+            this.lblJ4.Size = new System.Drawing.Size(100, 20);
+            this.lblJ4.TabIndex = 24;
+            this.lblJ4.Text = "Judge No 4";
             // 
-            // label3
+            // lblJ3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(592, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 20);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Judge No 3";
+            this.lblJ3.AutoSize = true;
+            this.lblJ3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJ3.Location = new System.Drawing.Point(592, 17);
+            this.lblJ3.Name = "lblJ3";
+            this.lblJ3.Size = new System.Drawing.Size(100, 20);
+            this.lblJ3.TabIndex = 23;
+            this.lblJ3.Text = "Judge No 3";
             // 
-            // label2
+            // lblJ2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(338, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 20);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Judge No 2";
+            this.lblJ2.AutoSize = true;
+            this.lblJ2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJ2.Location = new System.Drawing.Point(338, 17);
+            this.lblJ2.Name = "lblJ2";
+            this.lblJ2.Size = new System.Drawing.Size(100, 20);
+            this.lblJ2.TabIndex = 22;
+            this.lblJ2.Text = "Judge No 2";
             // 
-            // label1
+            // lblJ1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(81, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 20);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Judge No 1";
+            this.lblJ1.AutoSize = true;
+            this.lblJ1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJ1.Location = new System.Drawing.Point(81, 17);
+            this.lblJ1.Name = "lblJ1";
+            this.lblJ1.Size = new System.Drawing.Size(100, 20);
+            this.lblJ1.TabIndex = 21;
+            this.lblJ1.Text = "Judge No 1";
             // 
             // timer1
             // 
@@ -217,13 +217,12 @@
             this.columnHeader15});
             this.listView5.FullRowSelect = true;
             this.listView5.GridLines = true;
-            this.listView5.Location = new System.Drawing.Point(272, 199);
+            this.listView5.Location = new System.Drawing.Point(17, 199);
             this.listView5.Name = "listView5";
             this.listView5.Size = new System.Drawing.Size(229, 130);
             this.listView5.TabIndex = 18;
             this.listView5.UseCompatibleStateImageBehavior = false;
             this.listView5.View = System.Windows.Forms.View.Details;
-
             // 
             // columnHeader3
             // 
@@ -247,7 +246,7 @@
             this.columnHeader12});
             this.listView4.FullRowSelect = true;
             this.listView4.GridLines = true;
-            this.listView4.Location = new System.Drawing.Point(17, 199);
+            this.listView4.Location = new System.Drawing.Point(774, 40);
             this.listView4.Name = "listView4";
             this.listView4.Size = new System.Drawing.Size(229, 130);
             this.listView4.TabIndex = 17;
@@ -282,15 +281,15 @@
             this.columnHeader6.Text = "Score";
             this.columnHeader6.Width = 78;
             // 
-            // label7
+            // lblJ7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(592, 176);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 20);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Judge No 7";
+            this.lblJ7.AutoSize = true;
+            this.lblJ7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJ7.Location = new System.Drawing.Point(592, 176);
+            this.lblJ7.Name = "lblJ7";
+            this.lblJ7.Size = new System.Drawing.Size(100, 20);
+            this.lblJ7.TabIndex = 27;
+            this.lblJ7.Text = "Judge No 7";
             // 
             // listView3
             // 
@@ -411,15 +410,15 @@
             this.Controls.Add(this.listView8);
             this.Controls.Add(this.listView6);
             this.Controls.Add(this.listView7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblJ6);
+            this.Controls.Add(this.lblJ5);
+            this.Controls.Add(this.lblJ4);
+            this.Controls.Add(this.lblJ3);
+            this.Controls.Add(this.lblJ2);
+            this.Controls.Add(this.lblJ1);
             this.Controls.Add(this.listView5);
             this.Controls.Add(this.listView4);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblJ7);
             this.Controls.Add(this.listView3);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
@@ -427,7 +426,7 @@
             this.MaximizeBox = false;
             this.Name = "TopFiveScoring";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TopFiveScoring";
+            this.Text = "Ranking Scoring";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,12 +444,12 @@
         private System.Windows.Forms.ColumnHeader columnHeader20;
         private System.Windows.Forms.ColumnHeader columnHeader21;
         private System.Windows.Forms.ColumnHeader columnHeader15;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblJ6;
+        private System.Windows.Forms.Label lblJ5;
+        private System.Windows.Forms.Label lblJ4;
+        private System.Windows.Forms.Label lblJ3;
+        private System.Windows.Forms.Label lblJ2;
+        private System.Windows.Forms.Label lblJ1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ListView listView5;
@@ -464,7 +463,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblJ7;
         private System.Windows.Forms.ListView listView3;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;

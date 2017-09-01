@@ -50,8 +50,8 @@ namespace RSIJudgingSystemAdmin
 
             using (var db = new RSIJudgingSystemEntities())
             {
-                var contestants = from j in db.Top5Judge1
-                                  select new Top5Model
+                var contestants = from j in db.RankingJudge1
+                                  select new RankingModel
                                   {
                                       ContestantNo = j.ContestantNo,
                                       Personality = j.Personality,
@@ -73,6 +73,11 @@ namespace RSIJudgingSystemAdmin
 
                     ctr++;
                 });
+
+                if (contestants.Count() == 5)
+                    lblJ1.ForeColor = Color.Green;
+                else
+                    lblJ1.ForeColor = Color.Red;
             }
         }
 
@@ -82,8 +87,8 @@ namespace RSIJudgingSystemAdmin
 
             using (var db = new RSIJudgingSystemEntities())
             {
-                var contestants = from j in db.Top5Judge2
-                                  select new Top5Model
+                var contestants = from j in db.RankingJudge2
+                                  select new RankingModel
                                   {
                                       ContestantNo = j.ContestantNo,
                                       Personality = j.Personality,
@@ -105,6 +110,11 @@ namespace RSIJudgingSystemAdmin
 
                     ctr++;
                 });
+
+                if (contestants.Count() == 5)
+                    lblJ2.ForeColor = Color.Green;
+                else
+                    lblJ2.ForeColor = Color.Red;
             }
         }
 
@@ -114,8 +124,8 @@ namespace RSIJudgingSystemAdmin
 
             using (var db = new RSIJudgingSystemEntities())
             {
-                var contestants = from j in db.Top5Judge3
-                                  select new Top5Model
+                var contestants = from j in db.RankingJudge3
+                                  select new RankingModel
                                   {
                                       ContestantNo = j.ContestantNo,
                                       Personality = j.Personality,
@@ -137,6 +147,11 @@ namespace RSIJudgingSystemAdmin
 
                     ctr++;
                 });
+
+                if (contestants.Count() == 5)
+                    lblJ3.ForeColor = Color.Green;
+                else
+                    lblJ3.ForeColor = Color.Red;
             }
         }
 
@@ -146,8 +161,8 @@ namespace RSIJudgingSystemAdmin
 
             using (var db = new RSIJudgingSystemEntities())
             {
-                var contestants = from j in db.Top5Judge4
-                                  select new Top5Model
+                var contestants = from j in db.RankingJudge4
+                                  select new RankingModel
                                   {
                                       ContestantNo = j.ContestantNo,
                                       Personality = j.Personality,
@@ -169,6 +184,11 @@ namespace RSIJudgingSystemAdmin
 
                     ctr++;
                 });
+
+                if (contestants.Count() == 5)
+                    lblJ4.ForeColor = Color.Green;
+                else
+                    lblJ4.ForeColor = Color.Red;
             }
         }
 
@@ -178,8 +198,8 @@ namespace RSIJudgingSystemAdmin
 
             using (var db = new RSIJudgingSystemEntities())
             {
-                var contestants = from j in db.Top5Judge5
-                                  select new Top5Model
+                var contestants = from j in db.RankingJudge5
+                                  select new RankingModel
                                   {
                                       ContestantNo = j.ContestantNo,
                                       Personality = j.Personality,
@@ -201,6 +221,11 @@ namespace RSIJudgingSystemAdmin
 
                     ctr++;
                 });
+
+                if (contestants.Count() == 5)
+                    lblJ5.ForeColor = Color.Green;
+                else
+                    lblJ5.ForeColor = Color.Red;
             }
         }
 
@@ -210,8 +235,8 @@ namespace RSIJudgingSystemAdmin
 
             using (var db = new RSIJudgingSystemEntities())
             {
-                var contestants = from j in db.Top5Judge6
-                                  select new Top5Model
+                var contestants = from j in db.RankingJudge6
+                                  select new RankingModel
                                   {
                                       ContestantNo = j.ContestantNo,
                                       Personality = j.Personality,
@@ -233,6 +258,11 @@ namespace RSIJudgingSystemAdmin
 
                     ctr++;
                 });
+
+                if (contestants.Count() == 5)
+                    lblJ6.ForeColor = Color.Green;
+                else
+                    lblJ6.ForeColor = Color.Red;
             }
         }
 
@@ -242,8 +272,8 @@ namespace RSIJudgingSystemAdmin
 
             using (var db = new RSIJudgingSystemEntities())
             {
-                var contestants = from j in db.Top5Judge7
-                                  select new Top5Model
+                var contestants = from j in db.RankingJudge7
+                                  select new RankingModel
                                   {
                                       ContestantNo = j.ContestantNo,
                                       Personality = j.Personality,
@@ -265,6 +295,11 @@ namespace RSIJudgingSystemAdmin
 
                     ctr++;
                 });
+
+                if (contestants.Count() == 5)
+                    lblJ7.ForeColor = Color.Green;
+                else
+                    lblJ7.ForeColor = Color.Red;
             }
         }
 
@@ -274,133 +309,54 @@ namespace RSIJudgingSystemAdmin
 
             using (var db = new RSIJudgingSystemEntities())
             {
-                var contestant = db.ContestantProfile.OrderByDescending(r => r.PanelInterview).ToList();
+                var query = from c in db.ContestantProfile
+                            join fJ1 in db.RankingJudge1 on c.ContestantNo equals fJ1.ContestantNo 
+                            join fJ2 in db.RankingJudge2 on c.ContestantNo equals fJ2.ContestantNo 
+                            join fJ3 in db.RankingJudge3 on c.ContestantNo equals fJ3.ContestantNo 
+                            join fJ4 in db.RankingJudge4 on c.ContestantNo equals fJ4.ContestantNo 
+                            join fJ5 in db.RankingJudge5 on c.ContestantNo equals fJ5.ContestantNo 
+                            join fJ6 in db.RankingJudge6 on c.ContestantNo equals fJ6.ContestantNo
+                            join fJ7 in db.RankingJudge7 on c.ContestantNo equals fJ7.ContestantNo 
+                            select new RankingScoreModel
+                            {
+                                ContestantNo = c.ContestantNo,
 
-                List<Top10ScoreModel> top10List = new List<Top10ScoreModel>();
+                                Personality1 = fJ1.Personality,
+                                WIT1 = fJ1.Wit,
 
-                for (int x = 0; x < contestant.Count; x++)
+                                Personality2 = fJ2.Personality,
+                                WIT2 = fJ2.Wit,
+
+                                Personality3 = fJ3.Personality,
+                                WIT3 = fJ3.Wit,
+
+                                Personality4 = fJ4.Personality,
+                                WIT4 = fJ4.Wit,
+
+                                Personality5 = fJ5.Personality,
+                                WIT5 = fJ5.Wit,
+
+                                Personality6 = fJ6.Personality,
+                                WIT6 = fJ6.Wit,
+
+                                Personality7 = fJ7.Personality,
+                                WIT7 = fJ7.Wit,
+
+                                TotalScore = ((fJ1.Personality + fJ1.Wit) +
+                                (fJ1.Personality + fJ2.Wit) +
+                                (fJ3.Personality + fJ3.Wit) +
+                                (fJ4.Personality + fJ4.Wit) +
+                                (fJ5.Personality + fJ5.Wit) +
+                                (fJ6.Personality + fJ6.Wit) +
+                                (fJ7.Personality + fJ7.Wit)/7)
+                            };
+
+                var rankList = query.OrderByDescending(r => r.TotalScore).ToList();
+
+                int x = 1;
+                rankList.ForEach(item =>
                 {
-                    if (x < 10)
-                    {
-                        var contesNo = contestant[x].ContestantNo;
-
-                        var query = from c in db.ContestantProfile
-                                    join j1 in db.Top10Judge1 on c.ContestantNo equals j1.ContestantNo into qJ1
-                                    from fJ1 in qJ1.DefaultIfEmpty()
-                                    join j2 in db.Top10Judge2 on c.ContestantNo equals j2.ContestantNo into qJ2
-                                    from fJ2 in qJ2.DefaultIfEmpty()
-                                    join j3 in db.Top10Judge3 on c.ContestantNo equals j3.ContestantNo into qJ3
-                                    from fJ3 in qJ3.DefaultIfEmpty()
-                                    join j4 in db.Top10Judge4 on c.ContestantNo equals j4.ContestantNo into qJ4
-                                    from fJ4 in qJ4.DefaultIfEmpty()
-                                    join j5 in db.Top10Judge5 on c.ContestantNo equals j5.ContestantNo into qJ5
-                                    from fJ5 in qJ5.DefaultIfEmpty()
-                                    join j6 in db.Top10Judge6 on c.ContestantNo equals j6.ContestantNo into qJ6
-                                    from fJ6 in qJ6.DefaultIfEmpty()
-                                    join j7 in db.Top10Judge7 on c.ContestantNo equals j7.ContestanceNo into qJ7
-                                    from fJ7 in qJ7.DefaultIfEmpty()
-                                    where c.ContestantNo == contesNo
-                                    select new Top10ScoreModel
-                                    {
-                                        contestantNo = c.ContestantNo,
-                                        panelInterview = c.PanelInterview,
-
-                                        beauty1 = fJ1.Beauty,
-                                        intelligence1 = fJ1.Intelligence,
-                                        delivery1 = fJ1.Delivery,
-
-                                        beauty2 = fJ2.Beauty,
-                                        intelligence2 = fJ2.Intelligence,
-                                        delivery2 = fJ2.Delivery,
-
-                                        beauty3 = fJ3.Beauty,
-                                        intelligence3 = fJ3.Intelligence,
-                                        delivery3 = fJ3.Delivery,
-
-                                        beauty4 = fJ4.Beauty,
-                                        intelligence4 = fJ4.Intelligence,
-                                        delivery4 = fJ4.Delivery,
-
-                                        beauty5 = fJ5.Beauty,
-                                        intelligence5 = fJ5.Intelligence,
-                                        delivery5 = fJ5.Delivery,
-
-                                        beauty6 = fJ6.Beauty,
-                                        intelligence6 = fJ6.Intelligence,
-                                        delivery6 = fJ6.Delivery,
-
-                                        beauty7 = fJ7.Beauty,
-                                        intelligence7 = fJ7.Intelligence,
-                                        delivery7 = fJ7.Delivery
-                                    };
-
-                        top10List.Add(query.SingleOrDefault());
-                    }
-                }
-
-                var top10 = top10List.OrderByDescending(r => r.TotalScore).ToList();
-
-                List<Top5ScoreModel> top5Score = new List<Top5ScoreModel>();
-
-                for(int x = 0; x < top10.Count; x++)
-                {
-                    if(x < 5)
-                    {
-                        var tempNo = top10[x].contestantNo;
-
-                        var query = from c in db.ContestantProfile
-                                    join j1 in db.Top5Judge1 on c.ContestantNo equals j1.ContestantNo into qJ1
-                                    from fJ1 in qJ1.DefaultIfEmpty()
-                                    join j2 in db.Top5Judge2 on c.ContestantNo equals j2.ContestantNo into qJ2
-                                    from fJ2 in qJ2.DefaultIfEmpty()
-                                    join j3 in db.Top5Judge3 on c.ContestantNo equals j3.ContestantNo into qJ3
-                                    from fJ3 in qJ3.DefaultIfEmpty()
-                                    join j4 in db.Top5Judge4 on c.ContestantNo equals j4.ContestantNo into qJ4
-                                    from fJ4 in qJ4.DefaultIfEmpty()
-                                    join j5 in db.Top5Judge5 on c.ContestantNo equals j5.ContestantNo into qJ5
-                                    from fJ5 in qJ5.DefaultIfEmpty()
-                                    join j6 in db.Top5Judge6 on c.ContestantNo equals j6.ContestantNo into qJ6
-                                    from fJ6 in qJ6.DefaultIfEmpty()
-                                    join j7 in db.Top5Judge7 on c.ContestantNo equals j7.ContestantNo into qJ7
-                                    from fJ7 in qJ7.DefaultIfEmpty()
-                                    where c.ContestantNo == tempNo
-                                    select new Top5ScoreModel
-                                    {
-                                        ContestantNo = c.ContestantNo,
-
-                                        Personality1 = fJ1.Personality,
-                                        WIT1 = fJ1.Wit,
-
-                                        Personality2 = fJ2.Personality,
-                                        WIT2 = fJ2.Wit,
-
-                                        Personality3 = fJ3.Personality,
-                                        WIT3 = fJ3.Wit,
-
-                                        Personality4 = fJ4.Personality,
-                                        WIT4 = fJ4.Wit,
-
-                                        Personality5 = fJ5.Personality,
-                                        WIT5 = fJ5.Wit,
-
-                                        Personality6 = fJ6.Personality,
-                                        WIT6 = fJ6.Wit,
-
-                                        Personality7 = fJ7.Personality,
-                                        WIT7 = fJ7.Wit
-                                    };
-
-                        top5Score.Add(query.FirstOrDefault());
-                    }
-                }
-
-                top5Score = top5Score.OrderByDescending(r => r.TotalScore).ToList();
-
-                int ctr = 1;
-
-                top5Score.ForEach(item =>
-                {
-                    ListViewItem lvi = new ListViewItem(ctr.ToString());
+                    ListViewItem lvi = new ListViewItem(x.ToString());
 
                     lvi.SubItems.Add(item.ContestantNo);
 
@@ -408,7 +364,7 @@ namespace RSIJudgingSystemAdmin
 
                     listView8.Items.Add(lvi);
 
-                    ctr++;
+                    x++;
                 });
             }
         }

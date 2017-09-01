@@ -65,6 +65,11 @@ namespace RSIJudgingSystemAdmin
 
                     ctr++;
                 });
+
+                if (contestants.Count() == 19)
+                    lblJ1.ForeColor = Color.Green;
+                else
+                    lblJ1.ForeColor = Color.Red;
             }
         }
 
@@ -100,6 +105,11 @@ namespace RSIJudgingSystemAdmin
 
                     ctr++;
                 });
+
+                if (contestants.Count() == 19)
+                    lblJ2.ForeColor = Color.Green;
+                else
+                    lblJ2.ForeColor = Color.Red;
             }
         }
 
@@ -135,6 +145,11 @@ namespace RSIJudgingSystemAdmin
 
                     ctr++;
                 });
+
+                if (contestants.Count() == 19)
+                    lblJ3.ForeColor = Color.Green;
+                else
+                    lblJ3.ForeColor = Color.Red;
             }
         }
 
@@ -170,6 +185,11 @@ namespace RSIJudgingSystemAdmin
 
                     ctr++;
                 });
+
+                if (contestants.Count() == 19)
+                    lblJ4.ForeColor = Color.Green;
+                else
+                    lblJ4.ForeColor = Color.Red;
             }
         }
 
@@ -205,6 +225,11 @@ namespace RSIJudgingSystemAdmin
 
                     ctr++;
                 });
+
+                if (contestants.Count() == 19)
+                    lblJ5.ForeColor = Color.Green;
+                else
+                    lblJ5.ForeColor = Color.Red;
             }
         }
 
@@ -240,6 +265,11 @@ namespace RSIJudgingSystemAdmin
 
                     ctr++;
                 });
+
+                if (contestants.Count() == 19)
+                    lblJ6.ForeColor = Color.Green;
+                else
+                    lblJ6.ForeColor = Color.Red;
             }
         }
 
@@ -275,6 +305,11 @@ namespace RSIJudgingSystemAdmin
 
                     ctr++;
                 });
+
+                if (contestants.Count() == 19)
+                    lblJ7.ForeColor = Color.Green;
+                else
+                    lblJ7.ForeColor = Color.Red;
             }
         }
 
@@ -307,8 +342,6 @@ namespace RSIJudgingSystemAdmin
 
                 for (int x = 0; x < contestant.Count; x++)
                 {
-                    if(x < 10)
-                    {
                         var contesNo = contestant[x].ContestantNo;
 
                         var query = from c in db.ContestantProfile
@@ -362,7 +395,7 @@ namespace RSIJudgingSystemAdmin
                                     };
 
                         top10List.Add(query.SingleOrDefault());
-                    }
+                    
                 }
 
                 var temp = top10List.OrderByDescending(r => r.TotalScore).ToList();
@@ -394,6 +427,12 @@ namespace RSIJudgingSystemAdmin
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Top10Report form = new Top10Report();
+            form.ShowDialog();
         }
     }
 }
