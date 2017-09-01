@@ -41,19 +41,19 @@
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView4 = new System.Windows.Forms.ListView();
+            this.listView5 = new System.Windows.Forms.ListView();
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView5 = new System.Windows.Forms.ListView();
+            this.listView6 = new System.Windows.Forms.ListView();
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView6 = new System.Windows.Forms.ListView();
+            this.listView7 = new System.Windows.Forms.ListView();
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView7 = new System.Windows.Forms.ListView();
+            this.listView4 = new System.Windows.Forms.ListView();
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -160,20 +160,20 @@
             this.columnHeader9.Text = "Score";
             this.columnHeader9.Width = 78;
             // 
-            // listView4
+            // listView5
             // 
-            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader10,
             this.columnHeader11,
             this.columnHeader12});
-            this.listView4.FullRowSelect = true;
-            this.listView4.GridLines = true;
-            this.listView4.Location = new System.Drawing.Point(12, 287);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(229, 215);
-            this.listView4.TabIndex = 3;
-            this.listView4.UseCompatibleStateImageBehavior = false;
-            this.listView4.View = System.Windows.Forms.View.Details;
+            this.listView5.FullRowSelect = true;
+            this.listView5.GridLines = true;
+            this.listView5.Location = new System.Drawing.Point(12, 287);
+            this.listView5.Name = "listView5";
+            this.listView5.Size = new System.Drawing.Size(229, 215);
+            this.listView5.TabIndex = 3;
+            this.listView5.UseCompatibleStateImageBehavior = false;
+            this.listView5.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader10
             // 
@@ -189,20 +189,20 @@
             this.columnHeader12.Text = "Score";
             this.columnHeader12.Width = 78;
             // 
-            // listView5
+            // listView6
             // 
-            this.listView5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView6.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader13,
             this.columnHeader14,
             this.columnHeader15});
-            this.listView5.FullRowSelect = true;
-            this.listView5.GridLines = true;
-            this.listView5.Location = new System.Drawing.Point(267, 287);
-            this.listView5.Name = "listView5";
-            this.listView5.Size = new System.Drawing.Size(229, 215);
-            this.listView5.TabIndex = 4;
-            this.listView5.UseCompatibleStateImageBehavior = false;
-            this.listView5.View = System.Windows.Forms.View.Details;
+            this.listView6.FullRowSelect = true;
+            this.listView6.GridLines = true;
+            this.listView6.Location = new System.Drawing.Point(267, 287);
+            this.listView6.Name = "listView6";
+            this.listView6.Size = new System.Drawing.Size(229, 215);
+            this.listView6.TabIndex = 4;
+            this.listView6.UseCompatibleStateImageBehavior = false;
+            this.listView6.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader13
             // 
@@ -218,20 +218,20 @@
             this.columnHeader15.Text = "Score";
             this.columnHeader15.Width = 78;
             // 
-            // listView6
+            // listView7
             // 
-            this.listView6.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView7.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader16,
             this.columnHeader17,
             this.columnHeader18});
-            this.listView6.FullRowSelect = true;
-            this.listView6.GridLines = true;
-            this.listView6.Location = new System.Drawing.Point(518, 287);
-            this.listView6.Name = "listView6";
-            this.listView6.Size = new System.Drawing.Size(229, 215);
-            this.listView6.TabIndex = 5;
-            this.listView6.UseCompatibleStateImageBehavior = false;
-            this.listView6.View = System.Windows.Forms.View.Details;
+            this.listView7.FullRowSelect = true;
+            this.listView7.GridLines = true;
+            this.listView7.Location = new System.Drawing.Point(518, 287);
+            this.listView7.Name = "listView7";
+            this.listView7.Size = new System.Drawing.Size(229, 215);
+            this.listView7.TabIndex = 5;
+            this.listView7.UseCompatibleStateImageBehavior = false;
+            this.listView7.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader16
             // 
@@ -247,20 +247,20 @@
             this.columnHeader18.Text = "Score";
             this.columnHeader18.Width = 78;
             // 
-            // listView7
+            // listView4
             // 
-            this.listView7.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader19,
             this.columnHeader20,
             this.columnHeader21});
-            this.listView7.FullRowSelect = true;
-            this.listView7.GridLines = true;
-            this.listView7.Location = new System.Drawing.Point(763, 46);
-            this.listView7.Name = "listView7";
-            this.listView7.Size = new System.Drawing.Size(229, 215);
-            this.listView7.TabIndex = 6;
-            this.listView7.UseCompatibleStateImageBehavior = false;
-            this.listView7.View = System.Windows.Forms.View.Details;
+            this.listView4.FullRowSelect = true;
+            this.listView4.GridLines = true;
+            this.listView4.Location = new System.Drawing.Point(763, 46);
+            this.listView4.Name = "listView4";
+            this.listView4.Size = new System.Drawing.Size(229, 215);
+            this.listView4.TabIndex = 6;
+            this.listView4.UseCompatibleStateImageBehavior = false;
+            this.listView4.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader19
             // 
@@ -416,10 +416,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.listView4);
             this.Controls.Add(this.listView7);
             this.Controls.Add(this.listView6);
             this.Controls.Add(this.listView5);
-            this.Controls.Add(this.listView4);
             this.Controls.Add(this.listView3);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.listView1);
@@ -447,19 +447,19 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ListView listView5;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ListView listView5;
+        private System.Windows.Forms.ListView listView6;
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ColumnHeader columnHeader15;
-        private System.Windows.Forms.ListView listView6;
+        private System.Windows.Forms.ListView listView7;
         private System.Windows.Forms.ColumnHeader columnHeader16;
         private System.Windows.Forms.ColumnHeader columnHeader17;
         private System.Windows.Forms.ColumnHeader columnHeader18;
-        private System.Windows.Forms.ListView listView7;
+        private System.Windows.Forms.ListView listView4;
         private System.Windows.Forms.ColumnHeader columnHeader19;
         private System.Windows.Forms.ColumnHeader columnHeader20;
         private System.Windows.Forms.ColumnHeader columnHeader21;

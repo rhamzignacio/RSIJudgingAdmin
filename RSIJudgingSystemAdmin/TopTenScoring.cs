@@ -180,7 +180,7 @@ namespace RSIJudgingSystemAdmin
             using (var db = new RSIJudgingSystemEntities())
             {
                 var contestants = from c in db.ContestantProfile
-                                  join j in db.Top10Judge3 on c.ContestantNo equals j.ContestantNo
+                                  join j in db.Top10Judge5 on c.ContestantNo equals j.ContestantNo
                                   select new Top10Model
                                   {
                                       ContestantNo = c.ContestantNo,
