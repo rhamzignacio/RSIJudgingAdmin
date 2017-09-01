@@ -96,6 +96,12 @@
     <Compile Include="RankingJudge7.cs">
       <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="RankingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RankingReport.Designer.cs">
+      <DependentUpon>RankingReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="RankingWiner.cs">
       <DependentUpon>RSIJudgingSystemEntities.tt</DependentUpon>
     </Compile>
@@ -197,6 +203,7 @@
     <Compile Include="TopTenToFiveScoring.Designer.cs">
       <DependentUpon>TopTenToFiveScoring.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ForRanking.rdlc" />
     <EmbeddedResource Include="ForTop10.rdlc" />
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -210,6 +217,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RankingReport.resx">
+      <DependentUpon>RankingReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Top10Report.resx">
       <DependentUpon>Top10Report.cs</DependentUpon>
     </EmbeddedResource>

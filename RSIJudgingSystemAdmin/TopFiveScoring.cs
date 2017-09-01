@@ -342,13 +342,13 @@ namespace RSIJudgingSystemAdmin
                                 Personality7 = fJ7.Personality,
                                 WIT7 = fJ7.Wit,
 
-                                TotalScore = ((fJ1.Personality + fJ1.Wit) +
-                                (fJ1.Personality + fJ2.Wit) +
+                                TotalScore = (((fJ1.Personality + fJ1.Wit) +
+                                (fJ2.Personality + fJ2.Wit) +
                                 (fJ3.Personality + fJ3.Wit) +
                                 (fJ4.Personality + fJ4.Wit) +
                                 (fJ5.Personality + fJ5.Wit) +
                                 (fJ6.Personality + fJ6.Wit) +
-                                (fJ7.Personality + fJ7.Wit)/7)
+                                (fJ7.Personality + fJ7.Wit))/7)
                             };
 
                 var rankList = query.OrderByDescending(r => r.TotalScore).ToList();
@@ -372,6 +372,13 @@ namespace RSIJudgingSystemAdmin
         private void listView5_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RankingReport form = new RankingReport();
+
+            form.ShowDialog();
         }
     }
 }
